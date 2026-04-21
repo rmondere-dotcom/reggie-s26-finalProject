@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="portal-layout">
+    <aside class="sidebar">
+      <h1>Bakery Branding</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a class="active" href="onboarding.html">Onboarding</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="topbar">
+        <h2>Guided Onboarding Form</h2>
+      </div>
+
+      <div class="form-box">
+        <div class="step-row">
+          <div class="step active">1</div>
+          <div class="step-line"></div>
+          <div class="step">2</div>
+          <div class="step-line"></div>
+          <div class="step">3</div>
+        </div>
+
+        <section class="card highlight">
+          <h3>Action Required</h3>
+          <p>Tell us a little about your business.</p>
+        </section>
+
+        <label for="business">What does your business do?</label>
+        <textarea id="business" rows="5" placeholder="Type here..."></textarea>
+
+        <label for="industry">Industry</label>
+        <select id="industry">
+          <option>Select an Industry</option>
+          <option>Food</option>
+          <option>Retail</option>
+          <option>Fashion</option>
+        </select>
+
+        <label for="traits">Brand Personality</label>
+        <select id="traits">
+          <option>Select 2-3 traits</option>
+          <option>Modern</option>
+          <option>Warm</option>
+          <option>Playful</option>
+          <option>Elegant</option>
+        </select>
+
+        <br>
+        <button>Next</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -3,50 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Client Portal Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="portal-layout">
+    <aside class="sidebar">
+      <h1>Bakery Branding</h1>
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="onboarding.html">Onboarding</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-  <div class="container">
-
-    <div class="sidebar">
-      <h2>LOGO</h2>
-      <a href="index.html" class="active">Home</a>
-      <a href="#">Profile</a>
-      <a href="payment.html">Payment</a>
-      <a href="chat.html">Chat</a>
-      <a href="#">Dashboard</a>
-    </div>
-
-    <div class="main">
+    <main class="main-content">
       <div class="topbar">
-        <input type="text" placeholder="Search">
+        <p>Good Morning, Rachel</p>
+        <h2>Project Overview</h2>
       </div>
 
-      <h1>Bloom Bakery Branding</h1>
-      <p>Welcome back, Rachel</p>
+      <div class="grid-cards">
+        <section class="card status-card">
+          <h3>Your project is on track</h3>
+          <p>We are currently in the revision stage of your branding project.</p>
+          <a class="button button-yellow" href="dashboard.html">Review Latest Updates</a>
+        </section>
 
-      <div class="box">
-        <h2>Project Status</h2>
-        <p>Your project is currently in the revision stage.</p>
+        <section class="card">
+          <h3>Next Deadline</h3>
+          <p>Feedback for Logo Concept v2 is due March 30.</p>
+        </section>
+
+        <section class="card">
+          <h3>Next Payment</h3>
+          <p>$500 is due March 28.</p>
+          <a class="button" href="payment.html">View Payment</a>
+        </section>
+
+        <section class="card">
+          <h3>Latest Update</h3>
+          <p>Logo_v2 was uploaded for review.</p>
+        </section>
+
+        <section class="card" style="grid-column: 1 / -1;">
+          <h3>Your Designer Left You a Note</h3>
+          <p class="small-text">
+            I uploaded the newest logo revision. Once I get your feedback, I’ll move into the next round of edits.
+          </p>
+        </section>
       </div>
-
-      <div class="box">
-        <h2>Next Steps</h2>
-        <p>Review the latest logo and leave feedback.</p>
-        <a href="chat.html"><button>Go to Chat</button></a>
-      </div>
-
-      <div class="box">
-        <h2>Upcoming</h2>
-        <p>Next Deadline: March 30</p>
-        <p>Next Payment: $500 Due March 28</p>
-      </div>
-
-    </div>
-
+    </main>
   </div>
-
 </body>
 </html>

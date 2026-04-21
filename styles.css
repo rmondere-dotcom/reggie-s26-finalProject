@@ -1,61 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f1f1f1;
+  background-color: #f3f2ec;
+  color: #222;
 }
 
-.container {
-  display: flex;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 150px;
-  background: white;
-  padding: 20px;
-  border-right: 1px solid #ccc;
-  height: 100vh;
-}
-
-.sidebar a {
-  display: block;
-  margin: 10px 0;
+a {
+  color: inherit;
   text-decoration: none;
-  color: #333;
 }
 
-.sidebar a.active {
+.portal-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+
+.sidebar {
+  background-color: #d9e2e6;
+  padding: 24px 18px;
+  border-right: 1px solid #c8d0d4;
+}
+
+.sidebar h1 {
+  font-size: 1.4rem;
+  margin: 0 0 30px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav li {
+  margin-bottom: 12px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
   font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Main content */
-.main {
-  flex: 1;
-  padding: 20px;
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: translateX(3px);
 }
 
-/* Top bar */
+.main-content {
+  padding: 32px;
+}
+
 .topbar {
+  margin-bottom: 24px;
+}
+
+.topbar p {
+  margin: 0 0 6px;
+  color: #555;
+}
+
+.topbar h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 14px;
+  padding: 18px;
   margin-bottom: 20px;
 }
 
-.topbar input {
-  padding: 8px;
-  width: 200px;
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
-/* Boxes */
-.box {
-  background: white;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
+.card p {
+  margin-top: 0;
 }
 
-/* Buttons */
+.highlight {
+  background-color: #ece7b7;
+}
+
+.status-card {
+  background-color: #f8f8f5;
+}
+
+.progress-list,
+.file-list,
+.invoice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.progress-list li,
+.file-list li,
+.invoice-list li {
+  background-color: #efefef;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.progress-list li.current {
+  background-color: #ece7b7;
+}
+
+.progress-list li.complete {
+  background-color: #dfead7;
+}
+
+.button,
 button {
-  padding: 8px 12px;
-  background: #f2d456;
+  display: inline-block;
+  background-color: #b7b8bb;
+  color: #222;
   border: none;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover,
+button:hover {
+  background-color: #a6a7aa;
+  transform: scale(1.03);
+}
+
+.button-yellow {
+  background-color: #ece7b7;
+}
+
+.button-yellow:hover {
+  background-color: #ded99f;
+}
+
+.small-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.form-box {
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 12px 0 6px;
+}
+
+textarea,
+select,
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.preview-box {
+  width: 100%;
+  height: 260px;
+  background-color: #79b6d6;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.step {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.step.active {
+  background-color: #999;
+  color: white;
+}
+
+.step-line {
+  flex: 1;
+  height: 2px;
+  background-color: #bbb;
+}
+
+.note-card {
+  border: 1px solid #222;
+}
+
+@media (max-width: 900px) {
+  .portal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #c8d0d4;
+  }
+
+  .grid-two,
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
 }
